@@ -34,7 +34,7 @@ In this example, we will add summarization capability to the Cognitive Search in
 
 ## Requirements
 
-![image-20230227094029410](.\img\custom-skill-archi.png)
+![image-20230227094029410](./img/custom-skill-archi.png)
 
 To deploy this project you'll need:
 
