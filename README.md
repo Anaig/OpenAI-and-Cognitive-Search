@@ -36,16 +36,19 @@ In this example, we will add summarization capability to the Cognitive Search in
 
 ![image-20230227094029410](./img/custom-skill-archi.png)
 
-To deploy this project you'll need:
+To deploy this project you'll need these Azure resources:
 
-- [Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/) 
-- [Azure OpenAI](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview) 
+- [Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/) : S1 tier is recommended
+- [Azure OpenAI](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview): With the text model of your choice
 
-- Python [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview) 
+- Python [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview): For this project, I used Python 3.9
 
 For the development, it is recommended to use [Visual Studio Code](https://code.visualstudio.com/) and [Postman](https://www.postman.com/).
 
+For Visual Studio Code, you can install the [Azure Function extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) and the [Azure Function Core Tool](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Ccsharp%2Cportal%2Cbash#v2).
+
 ## Get started
 
-- Update the [Azure Functions]((.\openai-custom-skill\openai_request\__init__.py)) with your own OpenAI prompt.
-- Deploy the function to Azure.
+- Deploy your OpenAI custom skill using [Azure Functions](.\openai-custom-skill\custom_skillset_setup.md).
+- Integrate it in your [Cognitive Search Indexer](.\cognitive_search_skillset\cognitive_search_setup.md).
+- Query your new index.

@@ -1,10 +1,12 @@
-"""Modules import."""
+ """Modules import."""
 import os
 import json
 import logging
 import openai
 import azure.functions as func
 
+# Your Azure OpenAI endpoint
+OPENAI_ENDPOINT = "https://YOUR_OPEN_AI_SERVICE_NAME.openai.azure.com/"
 # Prompt to be sent to Azure OpenAI
 OPENAI_PROMPT = "Summarize the following text in 3 sentences:"
 
@@ -46,7 +48,7 @@ def get_summary(text):
     """Send a prompt to Azure OpenAI"""
 
     openai.api_type = "azure"
-    openai.api_base = "https://anaigopenai.openai.azure.com/"
+    openai.api_base = OPENAI_ENDPOINT
     openai.api_version = "2022-12-01"
     openai.api_key = os.environ["AZURE_OPENAI_SECRET"]
 
