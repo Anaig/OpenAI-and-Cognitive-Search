@@ -1,6 +1,8 @@
 # OpenAI integration with Azure Cognitive-Search for document analysis
 *Azure OpenAI integration as a custom skillset in Azure Cognitive Search*
 
+![image-20230227094029410](./img/custom-skill-archi.png)
+
 ## Why this integration?
 
 OpenAI has revolutionized the way we develop applications by providing state-of-the-art machine learning models and making it easy for developers to add AI capabilities to their applications without needing to have an extensive background in data science. 
@@ -34,8 +36,6 @@ In this example, we will add summarization capability to the Cognitive Search in
 
 ## Requirements
 
-![image-20230227094029410](./img/custom-skill-archi.png)
-
 To deploy this project you'll need these Azure resources:
 
 - [Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/) : S1 tier is recommended
@@ -49,6 +49,6 @@ For Visual Studio Code, you can install the [Azure Function extension](https://m
 
 ## Get started
 
-- Deploy your OpenAI custom skill using [Azure Functions](.\openai-custom-skill\custom_skillset_setup.md).
-- Integrate it in your [Cognitive Search Indexer](.\cognitive_search_skillset\cognitive_search_setup.md).
+- Deploy your OpenAI custom skill using [Azure Functions](./openai-custom-skill/custom_skillset_setup.md).
+- Integrate it in your [Cognitive Search Indexer](./cognitive_search_skillset/cognitive_search_setup.md).
 - Query your new index.

@@ -4,7 +4,7 @@
 
 2. In the [OpenAI studio](https://oai.azure.com/), access the playground, go to *Deployments* and create a new deployment with the model of your choice. Save the model name for later use.
 
-3. Open the [open-ai-custom-skill](../) folder and open it in Visual Studio Code.
+3. Open the [open-ai-custom-skill](../openai-custom-skill) folder and open it in Visual Studio Code.
 
 4. Run the `func init` command in the terminal. You will get a new configuration files *local.settings.json*.
 
@@ -28,7 +28,7 @@
    }
    ```
 
-6. Update the [\_\_init\_\_.py](../openai_request/__init__.py) function file by updating the global variables `OPENAI_ENDPOINT` and `OPENAI_PROMPT` with your Azure OpenAI endpoint and the prompt you would like to apply to the text of your documents.
+6. Update the [\_\_init\_\_.py](../openai-custom-skill/openai_request/__init__.py) function file by updating the global variables `OPENAI_ENDPOINT` and `OPENAI_PROMPT` with your Azure OpenAI endpoint and the prompt you would like to apply to the text of your documents.
 7. Use the `func start` command in the command line to test locally. A local endpoint must appear at the end of the output.
 8. Use this endpoint to make a `POST` Rest call with the following body format, which is the format of an [array of record](https://learn.microsoft.com/en-us/azure/search/cognitive-search-custom-skill-interface#format-web-api-inputs) from Cognitive Search :
 
@@ -52,4 +52,4 @@
 
 
 
-If you are facing any issue, refer to the [Getting started with Azure Functions](../getting_started_with_azure_functions.md) documentation.
+If you are facing any issue, refer to the [Getting started with Azure Functions](../openai-custom-skill/getting_started_with_azure_functions.md) documentation.
