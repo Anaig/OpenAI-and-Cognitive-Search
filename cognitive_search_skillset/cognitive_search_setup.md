@@ -3,7 +3,7 @@
 In this example, we will use the REST APIs to deploy the Azure Cognitive Search indexer.
 
 - [x] **If you have an existing indexer:** You can add the new skills using the steps below.
-- [ ] **If you don't have an indexer yet:** You can use the [Postman collection](../Cognitive Search-OpenAI Integration.postman_collection.json) in this repository as a deployment template, after updating the parameters in the [ Postman environment](../Cognitive Search-OpenAI Integration.postman_environment.json) file.
+- [ ] **If you don't have an indexer yet:** You can use the [Postman collection](../cognitive_search_skillset/Cognitive%20Search-OpenAI%20Integration.postman_collection.json) in this repository as a deployment template, after updating the parameters in the [Postman environment](../cognitive_search_skillset/Cognitive%20Search-OpenAI%20Integration.postman_environment.json) file.
 
 ## Skillset
 
