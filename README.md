@@ -17,7 +17,7 @@ However, even if OpenAI APIs are very easy to use and integrate, you may have fa
 
 ## What is the added value of using Azure Cognitive Search with OpenAI?
 
-This is where Azure Cognitive Search comes as a great comes as a great complement to Azure OpenAI.
+This is where Azure Cognitive Search comes as a great complement to Azure OpenAI.
 
 - **Data Integration**: Azure Cognitive Search has connectors to many Data Sources to simplify data ingestion into a search index.
 - **Data transformation:** Transforms large undifferentiated file formats into into searchable text. Using the Optical Character Recognition skill, it can even process images.
