@@ -6,7 +6,7 @@
 
 3. Open the [open-ai-custom-skill](../openai-custom-skill) folder and open it in Visual Studio Code.
 
-4. Run the `func init` command in the terminal. You will get a new configuration files *local.settings.json*.
+4. Run the `func init` command in the terminal. You will get a new configuration files *local.settings.json*. You just need to run this command once, to get all the necessary Functions settings in your folder.
 
 5. Update *local.settings.json* with the following parameters:
 
@@ -28,8 +28,12 @@
    }
    ```
 
-6. Update the [\_\_init\_\_.py](../openai-custom-skill/openai_request/__init__.py) function file by updating the global variables `OPENAI_ENDPOINT` and `OPENAI_PROMPT` with your Azure OpenAI endpoint and the prompt you would like to apply to the text of your documents.
+   The `OPENAI_ENGINE` parameter is your model deployment name in Azure OpenAI.
+
+6. Update the [\_\_init\_\_.py](../openai-custom-skill/summarize/__init__.py) function file by updating the global variables `OPENAI_ENDPOINT` and `OPENAI_PROMPT` with your Azure OpenAI endpoint and the prompt you would like to apply to the text of your documents.
+
 7. Use the `func start` command in the command line to test locally. A local endpoint must appear at the end of the output.
+
 8. Use this endpoint to make a `POST` Rest call with the following body format, which is the format of an [array of record](https://learn.microsoft.com/en-us/azure/search/cognitive-search-custom-skill-interface#format-web-api-inputs) from Cognitive Search :
 
 ```json
@@ -47,9 +51,11 @@
 }
 ```
 
-9. Deploy the function to Azure using `func azure functionapp publish <YOUR_FUNCTION_APP_NAME>`. Don't forget to copy the environment variables from *local.settings.json* to your application settings.
+9. Deploy the function to Azure using `func azure functionapp publish <YOUR_FUNCTION_APP_NAME>`.  Don't forget to copy the environment variables from *local.settings.json* to your application settings.
 10. Save your function endpoint to use it in the Cognitive Search script.
 
 
+
+You can create as many Functions as Custom Skills you want. Just copy the current function folder or create a new folder under `open-ai-custom-skill`, named by the function you would like to create, that contains a `__init__.py` and a `function.json` file.
 
 If you are facing any issue, refer to the [Getting started with Azure Functions](../openai-custom-skill/getting_started_with_azure_functions.md) documentation.

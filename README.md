@@ -13,7 +13,7 @@ However, even if OpenAI APIs are very easy to use and integrate, you may have fa
 
 - **Format**: OpenAI only supports text or json format. If you want to analyze enterprise documents such as PDF, Word, PowerPoint, etc., you need to extract or transform your data.
 - **Source**: You cannot directly connect OpenAI to data storages like a database, a SharePoint or a Data Lake.
-- **Token limitation**: Depending on the model used, OpenAI requests can use up to 4097 tokens shared between prompt and completion. To analyze longer documents, the text needs to be spit into multiple pieces.
+- **Token limitation**: Depending on the model used, OpenAI requests can use up to 4097 tokens shared between prompt and completion. To analyze longer documents, the text needs to be split into multiple pieces.
 
 ## What is the added value of using Azure Cognitive Search with OpenAI?
 
